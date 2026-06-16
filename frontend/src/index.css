@@ -1,0 +1,294 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #102033;
+  background:
+    radial-gradient(circle at top left, rgba(255, 191, 105, 0.2), transparent 30%),
+    linear-gradient(180deg, #f7f8fb 0%, #eef2f8 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: #1f5eff;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #102033;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.nav a {
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  color: #102033;
+}
+
+.nav a.active {
+  background: rgba(31, 94, 255, 0.12);
+  color: #1f5eff;
+}
+
+.page-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 3rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 18px 50px rgba(16, 32, 51, 0.08);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: end;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(31, 94, 255, 0.12);
+  color: #1f5eff;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.tab-row,
+.toggle-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  border: 1px solid rgba(16, 32, 51, 0.12);
+  background: white;
+  color: #102033;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+}
+
+.tab.active {
+  background: #102033;
+  color: white;
+}
+
+.toolbar,
+.form-card {
+  padding: 1.25rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form label {
+  display: grid;
+  gap: 0.45rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  border: 1px solid rgba(16, 32, 51, 0.14);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  background: white;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.primary-button,
+.ghost-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.15rem;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: #1f5eff;
+  color: white;
+}
+
+.ghost-button {
+  background: rgba(16, 32, 51, 0.07);
+  color: #102033;
+}
+
+.primary-link {
+  color: #1f5eff;
+  font-weight: 700;
+}
+
+.auth-layout {
+  width: min(560px, 100%);
+  margin: 3rem auto 0;
+  padding: 1.75rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.auth-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.gig-card {
+  padding: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.gig-card__header,
+.gig-meta,
+.applicant-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.pill,
+.status,
+.profile-chip {
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.pill {
+  background: rgba(31, 94, 255, 0.12);
+  color: #1f5eff;
+}
+
+.status--open {
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+}
+
+.status--assigned {
+  background: rgba(245, 158, 11, 0.16);
+  color: #b45309;
+}
+
+.status--completed {
+  background: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.error-text {
+  color: #b91c1c;
+}
+
+.success-text {
+  color: #166534;
+}
+
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+}
+
+.applicant-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.profile-chip {
+  background: rgba(16, 32, 51, 0.08);
+  color: #102033;
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-shell {
+    width: min(100% - 1rem, 1100px);
+  }
+}
